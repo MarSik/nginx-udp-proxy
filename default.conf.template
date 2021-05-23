@@ -1,0 +1,11 @@
+stream {
+  server {
+    listen $PORT udp reuseport;
+    proxy_timeout 1m;
+    proxy_pass srvs;
+  }
+
+  upstream srvs {
+    server $SERVER;
+  }
+}
