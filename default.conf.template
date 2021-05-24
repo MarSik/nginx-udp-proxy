@@ -3,6 +3,7 @@ stream {
     listen [::]:$PORT udp;
     proxy_timeout 1m;
     proxy_pass srvs;
+    proxy_bind $BIND;
   }
 
   upstream srvs {
