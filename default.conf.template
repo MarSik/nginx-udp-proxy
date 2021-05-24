@@ -1,5 +1,6 @@
 stream {
   server {
+    listen *:$PORT udp;
     listen [::]:$PORT udp;
     proxy_timeout 1m;
     proxy_pass srvs;
